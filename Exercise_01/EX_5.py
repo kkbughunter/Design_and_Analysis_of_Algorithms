@@ -53,6 +53,6 @@ for i in range(1,n+1):
     final_y_re.append(end-start)
 
 plt.plot(final_x,final_y_it,label="Iterative")
-plt.plot(final_x,final_y_re, label="Iterative")
+plt.plot(final_x,final_y_re, label="Recursive")
 plt.legend()
 plt.show()
