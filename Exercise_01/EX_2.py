@@ -82,13 +82,3 @@ radixSort(radex_sort_list)
 print("insertion Sort : ",insertion_sort_list)
 print("Sell Sort : ",sell_sort_list)
 print("radex Sort : ",radex_sort_list)
-
-# plt.subplot(1,3,1)
-# plt.plot(x,insertion_sort_list)
-
-# plt.subplot(1,3,2)
-# plt.plot(x,sell_sort_list)
-
-# plt.subplot(1,3,3)
-# plt.plot(x,radex_sort_list)
-# plt.show()
