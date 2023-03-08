@@ -1,40 +1,31 @@
-# as per the basic knowledge in DAA
 
 import random as r
 import matplotlib.pyplot as plt
-
+import time as t
 def insertionSort(arr):
-    count=0
     for i in range(1, len(arr)):
         key = arr[i]
         j = i-1
         while j >= 0 and key < arr[j] :
             arr[j + 1] = arr[j]
             j -= 1
-            count+=1
         arr[j + 1] = key
-    return count
 
 
-def shellSort(arr, n):
-    count=0
-    gap=n//2
-    while gap>0:
-        j=gap
-        while j<n:
-            i=j-gap 
-            while i>=0:
-                if arr[i+gap]>arr[i]:
-                    break
-                else:
-                    arr[i+gap],arr[i]=arr[i],arr[i+gap]
-                    
-                i=i-gap 
-                count+=1
-            j+=1
-            
-        gap=gap//2
-    return count
+
+def shellSort(array, n):
+    interval = n // 2
+    while interval > 0:
+        for i in range(interval, n):
+            temp = array[i]
+            j = i
+            while j >= interval and array[j - interval] > temp:
+                array[j] = array[j - interval]
+                j -= interval
+
+            array[j] = temp
+        interval //= 2
+
 
 def countingSort(array, place):
     size = len(array)
@@ -60,44 +51,52 @@ def countingSort(array, place):
 
 
 def radixSort(array):
-    count=0
     max_element = max(array)
     place = 1
     while max_element // place > 0:
         countingSort(array, place)
-        count+=1
         place *= 10
-    return count
-n = int(input("Enter how many times : "))
+
+
+
+num = int(input("Enter how many times : "))
+
+
+
 final_y_insertion=[]
 final_y_sell=[]
 final_y_radex=[]
-final_x=[]
-for i in range(n):
-    x=[]
+
+x=[ a for a in range(1,num+1)]
+for i in range(1,num+1):
     y=[]
-    # n  = int(input("Enter the number of element : "))
     a=0
-    while(a!=n):
+    while(a!=i):
         r1 = r.randint(0,100)
         if r1 not in y:
             y.append(r1)
-            x.append(a)
             a+=1
     insertion_sort_list = y
     sell_sort_list = y
     radex_sort_list = y
-    final_y_insertion.append(insertionSort(insertion_sort_list))
-    final_y_sell.append(shellSort(sell_sort_list,n))
-    final_y_radex.append(radixSort(radex_sort_list))
-    final_x.append(i)
-print("insertion Sort : ",insertion_sort_list)
-print("Sell Sort : ",sell_sort_list)
-print("radex Sort : ",radex_sort_list)
 
-xx = range(len(final_x))
-plt.plot(xx,final_y_insertion,label="Insertion Sort")
-plt.plot(xx,final_y_sell,label="Sell Sort")
-plt.plot(xx,final_y_insertion,label="Radex Sort")
+    start = t.time()
+    insertionSort(insertion_sort_list)
+    end = t.time()
+    final_y_insertion.append(end-start)
+
+    start = t.time()
+    shellSort(sell_sort_list,len(y))
+    end = t.time()
+    final_y_sell.append(end-start)
+
+    start = t.time()
+    radixSort(radex_sort_list)
+    end = t.time()
+    final_y_radex.append(end-start)
+
+plt.plot(x,final_y_insertion,label="Insertion Sort")
+plt.plot(x,final_y_sell,label="Sell Sort")
+plt.plot(x,final_y_radex,label="Radex Sort")
 plt.legend()
 plt.show()
