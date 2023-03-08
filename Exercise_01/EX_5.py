@@ -1,62 +1,58 @@
-# as per the basic knowledge in DAA
-
 import random 
 import matplotlib.pyplot as plt
-def binarySearch_I(array, x, low, high,count):
+import time as t
+
+
+def binary_search_I(arr, x):
+    low = 0
+    high = len(arr) - 1
+    mid = 0 
     while low <= high:
-        count+=1
-        mid = low + (high - low)//2
-        if array[mid] == x:
-            return mid
-        elif array[mid] < x:
+        mid = (high + low) // 2
+        if arr[mid] < x:
             low = mid + 1
-        else:
+        elif arr[mid] > x:
             high = mid - 1
+        else:
+            return mid
     return -1
 
-
-def binarySearch_R(array, x, low, high,count):
-
+def binary_search_R(arr, low, high, x):
     if high >= low:
-        mid = low + (high - low)//2
-        count+=1
-        if array[mid] == x:
+        mid = (high + low) // 2
+        if arr[mid] == x:
             return mid
-        elif array[mid] > x:
-            return binarySearch_R(array, x, low, mid-1,count)
+        elif arr[mid] > x:
+            return binary_search_R(arr, low, mid - 1, x)
         else:
-            return binarySearch_R(array, x, mid + 1, high,count)
+            return binary_search_R(arr, mid + 1, high, x)
     else:
         return -1
-    
-
 n = int(input("Enter your number of elements : "))
 final_y_it=[]
 final_y_re=[]
-final_x = []
-for i in range(n):
+final_x = [a for a in range(1,n+1)]
+for i in range(1,n+1):
     arr=[]
-    x=[]
     a=0
     while(n!=a):
         r = random.randint(0,1000)
         if r not in arr:
             arr.append(r)
-            x.append(a)
             a+=1
-    it=0
-    re=0
     find_ele = arr[2]
-    binarySearch_I(arr, find_ele, 0, len(arr)-1,it)
-    final_y_it.append(it)
-    binarySearch_R(arr, find_ele, 0, len(arr)-1,re)
-    final_y_re.append(re)
-    final_x.append(i)
 
-# plt.plot(final_x,final_y_it,lable="Iterative")
-# plt.plot(final_x,final_y_re,lable="Recursive")
-# plt.legend()
+    start = t.time()
+    binary_search_I(arr, find_ele)
+    end = t.time()
+    final_y_it.append(end-start)
 
-plt.plot(final_x,final_y_it)
-plt.plot(final_x,final_y_re)
+    start = t.time()
+    binary_search_R(arr,  0, len(arr)-1, find_ele)
+    end = t.time()
+    final_y_re.append(end-start)
+
+plt.plot(final_x,final_y_it,label="Iterative")
+plt.plot(final_x,final_y_re, label="Iterative")
+plt.legend()
 plt.show()
