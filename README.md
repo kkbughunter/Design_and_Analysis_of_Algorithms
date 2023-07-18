@@ -51,9 +51,19 @@ This commands for Linux users
 | Hamiltonian Circuit Problem | O(n!)           | O(n!)              | O(n!)             | -                           |
 
 ## Unit-3
-| Algorithm               | Best Case          | Average Case       | Worst Case        | Recurrence Equation         |
-|-------------------------|--------------------|--------------------|-------------------|-----------------------------|
+| Algorithm                       | Best Case          | Average Case       | Worst Case        | Recurrence Equation         |
+|---------------------------------|--------------------|--------------------|-------------------|-----------------------------|
+| Binomial Coefficient            | O(n)               | O(n)               | O(n)              | -                           |
+| Knapsack Problem                | O(nW)              | O(nW)              | O(nW)             | -                           |
+| Matrix Chain Multiplication     | O(n^3)             | O(n^3)             | O(n^3)            | -                           |
+| Floyd's Warshall Algorithm      | O(n^3)             | O(n^3)             | O(n^3)            | -                           |
+| Dijkstra's Algorithm            | O((V+E)logV)       | O((V+E)logV)       | O((V+E)logV)      | -                           |
+| Prim's Algorithm                | O((V+E)logV)       | O((V+E)logV)       | O((V+E)logV)      | -                           |
+| Kruskal's Algorithm             | O(E logE)          | O(E logE)          | O(E logE)         | -                           |
 
+Please note that the time complexities for these algorithms are given as an approximation and may vary depending on the specific implementation and input characteristics.
+
+# Lab
 | Algorithm                       | Best Case         | Average Case      | Worst Case         | Recurrence Equation  |
 |---------------------------------|-------------------|-------------------|--------------------|----------------------|
 | Primality Checking              | O(1)              | O(√n)             | O(√n)              | -                    |
