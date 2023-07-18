@@ -19,6 +19,32 @@ This commands for Linux users
 1. [Exercise-1](https://github.com/KKBUGHUNTER/Design_and_Analysis_of_Algorithms/tree/main/Exercise_01) Searching and Sorting <br>
 
 
+| Algorithm               | Best Case          | Average Case       | Worst Case        | Recurrence Equation         |
+|-------------------------|--------------------|--------------------|-------------------|-----------------------------|
+| Unique Elements         | O(n)               | O(n)               | O(n log n)        | -                           |
+| Tower of Hanoi          | O(2^n)             | O(2^n)             | O(2^n)            | T(n) = 2T(n-1) + 1           |
+| Fibonacci               | O(1)               | O(2^n)             | O(2^n)            | F(n) = F(n-1) + F(n-2)       |
+| Factorial               | O(n)               | O(n)               | O(n)              | -                           |
+| Matrix Multiplication   | O(n^3)             | O(n^3)             | O(n^3)            | -                           |
+| Polynomial Evaluation   | O(n)               | O(n)               | O(n)              | -                           |
+| Primality Checking      | O(sqrt(n))         | O(sqrt(n))         | O(sqrt(n))        | -                           |
+| GCD of Two Numbers      | O(log(min(a,b)))   | O(log(min(a,b)))   | O(log(min(a,b)))  | -                           |
+| Binary Search           | O(1)               | O(log n)           | O(log n)          | -                           |
+| Linear Search           | O(1)               | O(n)               | O(n)              | -                           |
+| Interpolation Search    | O(1)               | O(log log n)       | O(n)              | -                           |
+| Selection Sort          | O(n^2)             | O(n^2)             | O(n^2)            | -                           |
+| Bubble Sort             | O(n)               | O(n^2)             | O(n^2)            | -                           |
+| Insertion Sort          | O(n)               | O(n^2)             | O(n^2)            | -                           |
+| Merge Sort              | O(n log n)         | O(n log n)         | O(n log n)        | T(n) = 2T(n/2) + O(n)        |
+| Quick Sort              | O(n log n)         | O(n log n)         | O(n^2)            | T(n) = T(k) + T(n-k-1) + O(n)|
+| Radix Sort              | O(kn)              | O(kn)              | O(kn)             | -                           |
+| Karatsuba Multiplication       | O(n^log2(3))            | O(n^log2(3))            | O(n^log2(3))           | T(n) = 3T(n/2) + O(n)         |
+| Largest Integer Multiplication | O(n)                    | O(n)                    | O(n)                   | -                              |
+| Matrix Multiplication          | O(n^3)                  | O(n^3)                  | O(n^3)                 | -                              |
+| Strassen's Matrix Multiplication | O(n^log2(7))           | O(n^log2(7))           | O(n^log2(7))          | T(n) = 7T(n/2) + O(n^2)       |
+
+
+
 | Algorithm                       | Best Case         | Average Case      | Worst Case         | Recurrence Equation  |
 |---------------------------------|-------------------|-------------------|--------------------|----------------------|
 | Primality Checking              | O(1)              | O(√n)             | O(√n)              | -                    |
