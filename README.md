@@ -18,7 +18,7 @@ This commands for Linux users
 ## Exercise
 1. [Exercise-1](https://github.com/KKBUGHUNTER/Design_and_Analysis_of_Algorithms/tree/main/Exercise_01) Searching and Sorting <br>
 
-
+## Unit-1
 | Algorithm               | Best Case          | Average Case       | Worst Case        | Recurrence Equation         |
 |-------------------------|--------------------|--------------------|-------------------|-----------------------------|
 | Unique Elements         | O(n)               | O(n)               | O(n log n)        | -                           |
@@ -35,6 +35,10 @@ This commands for Linux users
 | Selection Sort          | O(n^2)             | O(n^2)             | O(n^2)            | -                           |
 | Bubble Sort             | O(n)               | O(n^2)             | O(n^2)            | -                           |
 | Insertion Sort          | O(n)               | O(n^2)             | O(n^2)            | -                           |
+
+## Unit-2
+| Algorithm               | Best Case          | Average Case       | Worst Case        | Recurrence Equation         |
+|-------------------------|--------------------|--------------------|-------------------|-----------------------------|
 | Merge Sort              | O(n log n)         | O(n log n)         | O(n log n)        | T(n) = 2T(n/2) + O(n)        |
 | Quick Sort              | O(n log n)         | O(n log n)         | O(n^2)            | T(n) = T(k) + T(n-k-1) + O(n)|
 | Radix Sort              | O(kn)              | O(kn)              | O(kn)             | -                           |
@@ -42,8 +46,13 @@ This commands for Linux users
 | Largest Integer Multiplication | O(n)                    | O(n)                    | O(n)                   | -                              |
 | Matrix Multiplication          | O(n^3)                  | O(n^3)                  | O(n^3)                 | -                              |
 | Strassen's Matrix Multiplication | O(n^log2(7))           | O(n^log2(7))           | O(n^log2(7))          | T(n) = 7T(n/2) + O(n^2)       |
+| Subset Problem          | O(2^n)             | O(2^n)             | O(2^n)            | -                           |
+| N-Queens Problem        | O(n!)              | O(n!)              | O(n!)             | -                           |
+| Hamiltonian Circuit Problem | O(n!)           | O(n!)              | O(n!)             | -                           |
 
-
+## Unit-3
+| Algorithm               | Best Case          | Average Case       | Worst Case        | Recurrence Equation         |
+|-------------------------|--------------------|--------------------|-------------------|-----------------------------|
 
 | Algorithm                       | Best Case         | Average Case      | Worst Case         | Recurrence Equation  |
 |---------------------------------|-------------------|-------------------|--------------------|----------------------|
